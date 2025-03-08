@@ -20,18 +20,18 @@ const Contact = () => {
 
       <form className="max-w-[390px] md:max-w-[600px] mx-auto w-full space-y-5">
         <div className="flex items-center gap-5 flex-col md:flex-row">
-          <div className="rounded-[25px] h-full input-shadow flex items-start p-[2px] relative w-full">
-            <div className="custom-css rounded-[25px] w-full">
+          <div className="rounded-[25px] h-full shadow-input-shadow dark:shadow-input-shadow-dark flex items-start p-[2px] relative w-full">
+            <div className="shadow-inside-input-shadow dark:shadow-inside-input-shadow-dark rounded-[25px] w-full">
               <input
                 type="text"
                 placeholder="Your name"
-                className="w-full outline-none p-[20px] text-sm md:text-lg text-[#1c1c1c] bg-transparent border-none overflow-hidden h-full rounded-[20px]"
+                className="w-full outline-none p-[20px] text-sm md:text-lg text-[#1c1c1c] dark:text-white bg-transparent border-none overflow-hidden h-full rounded-[20px]"
               />
             </div>
           </div>
 
-          <div className="rounded-[25px] h-full input-shadow flex items-start p-[2px] relative w-full">
-            <div className="custom-css rounded-[25px] w-full">
+          <div className="rounded-[25px] h-full shadow-input-shadow dark:shadow-input-shadow-dark flex items-start p-[2px] relative w-full">
+            <div className="shadow-inside-input-shadow dark:shadow-inside-input-shadow-dark rounded-[25px] w-full">
               <input
                 type="text"
                 placeholder="Your email"
@@ -41,8 +41,8 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="rounded-[25px] h-[150px] input-shadow flex items-start p-[2px] relative w-full">
-          <div className="custom-css rounded-[25px] w-full h-full">
+        <div className="rounded-[25px] h-[150px] shadow-input-shadow dark:shadow-input-shadow-dark flex items-start p-[2px] relative w-full">
+          <div className="shadow-inside-input-shadow dark:shadow-inside-input-shadow-dark rounded-[25px] w-full h-full">
             <textarea
               type="text"
               placeholder="Your message..."

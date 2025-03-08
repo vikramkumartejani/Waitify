@@ -64,11 +64,11 @@ const Benefits = () => {
 
             <div className='max-w-[390px] md:max-w-[1100px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px]'>
                 {benefitsData.map((benefit) => (
-                    <div key={benefit.id} className='benefits-box p-[30px] space-y-6'>
+                    <div key={benefit.id} className='shadow-benefit border-2 border-[#007DFC0D] dark:border-white/10 bg-custom-white dark:bg-black/10 w-full opacity-100 rounded-[40px] p-[30px] space-y-6'>
                         {/* Icon  */}
                         <div className='p-[10px] relative w-[110px] h-[110px] mx-auto'>
-                            <div className='benefits-box-img'></div>
-                            <div className='benefits-img relative w-full h-full flex justify-center items-center'>
+                            <div className='overflow-hidden absolute inset-0 z-0 flex-none rounded-[50%] opacity-100 blur-xs dark:blur-none bg-custom-white dark:bg-black/10 shadow-benefit-image-box dark:shadow-benefit-image-box-dark'></div>
+                            <div className='bg-custom-white opacity-100 rounded-[50%] shadow-benefit-image dark:shadow-benefit-image-dark relative w-full h-full flex justify-center items-center'>
                                 <img
                                     src={benefit.icon}
                                     alt={benefit.title}
@@ -80,11 +80,11 @@ const Benefits = () => {
 
                         {/* Content  */}
                         <div className='space-y-[10px] text-center'>
-                            <h3 className='text-[#1c1c1c] text-lg font-semibold'>
+                            <h3 className='text-[#1c1c1c] dark:text-white text-lg font-semibold'>
                                 {benefit.title}
                             </h3>
 
-                            <p className='text-[#4d4d4d] text-lg'>
+                            <p className='text-[#4d4d4d] dark:text-white/90 text-lg'>
                                 {benefit.description}
                             </p>
                         </div>

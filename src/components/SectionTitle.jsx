@@ -1,21 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const SectionTitle = ({ text }) => {
     return (
         <>
-            {/* Light mode version - visible only in light mode */}
-            <div className="framer-lpt block dark:hidden">
-                <div className="framer-odhswi"></div>
-                <div className="framer-1jnfpv7">
-                    <p className="text-[#007dfc] text-base z-50">{text}</p>
-                </div>
-            </div>
-
-            {/* Dark mode version - visible only in dark mode */}
-            <div className="framer-lpt-dark dark:block hidden">
-                <div className="framer-odhswi-dark"></div>
-                <div className="framer-1jnfpv7-dark">
-                    <p className="text-white text-base z-50">{text}</p>
+            <div className="overflow-visible p-[5px] relative">
+                <div className="bg-custom-white dark:bg-hero-logo-dark blur-sm rounded-[50px] inset-0 overflow-hidden absolute z-0 flex-none transform-none shadow-section-title dark:shadow-section-title-dark"></div>
+                <div className=" rounded-[50px] bg-custom-white dark:bg-black/80 transform-none overflow-hidden relative py-[12px] px-[24px] shadow-section-title-inside dark:shadow-section-title-inside-dark">
+                    <p className="text-[#007dfc] dark:text-white text-base z-50">{text}</p>
                 </div>
             </div>
         </>
