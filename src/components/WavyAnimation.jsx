@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from '../assets/logo.svg'
 import Integrations1 from '../assets/integrations1.svg'
 import Integrations2 from '../assets/integrations2.svg'
 import Integrations3 from '../assets/integrations3.svg'
@@ -171,32 +172,7 @@ export default function WavyAnimation() {
         }}
       >
         <div className="flex items-center justify-center">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-              fill="#0080FF"
-              stroke="none"
-            />
-            <path
-              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12 7V12L16 9"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <img src={Logo} alt="logo" />
         </div>
       </motion.div>
 
