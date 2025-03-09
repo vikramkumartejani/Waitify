@@ -23,6 +23,8 @@ module.exports = {
         'faq-open': 'inset -3px -3px 6px 0px rgb(250, 251, 255), inset 3px 3px 6px 0px rgba(0, 125, 252, 0.15)',
         'input-shadow': '-2px -2px 4px 0 rgba(250, 251, 255, 1), 2px 2px 4px 0 rgba(0, 125, 252, 0.15)',
         'inside-input-shadow': 'inset -2px -2px 4px 0px rgba(250, 251, 255, 1), inset 2px 2px 4px 0px rgba(0, 125, 252, 0.15)',
+        'social-icons': '-2px -2px 4px 0px rgb(250, 251, 255), 2px 2px 4px 0px rgba(0, 125, 252, 0.15)',
+        'header-testimonials': '-3px -3px 6px 0px  rgb(250, 251, 255), 3px 3px 6px 0px  rgba(0, 125, 252, 0.15)',
         
         // Dark Shadows
         'hero-box-shadow-dark': '0 0.6021px 1.8065px -0.8333px rgba(0, 125, 252, 0.2), 0 2.2885px 6.8655px -1.6666px rgba(0, 125, 252, 0.2), 0 10px 30px -2.5px rgba(0, 125, 252, 0.2)',
@@ -35,6 +37,7 @@ module.exports = {
         'faq-open-dark': 'inset -3px -3px 6px 0px rgba(250, 251, 255, 0.2), inset 3px 3px 6px 0px rgba(0, 125, 252, 0.25)',
         'input-shadow-dark': '-2px -2px 4px 0 rgba(250, 251, 255, 0.2), 2px 2px 4px 0 rgba(0, 125, 252, 0.25)',
         'inside-input-shadow-dark': 'inset -2px -2px 4px 0px rgba(250, 251, 255, 0.2), inset 2px 2px 4px 0px rgba(0, 125, 252, 0.25)',
+        'social-icons-dark': '-2px -2px 4px 0px rgba(250, 251, 255, 0.2), 2px 2px 4px 0px rgba(0, 125, 252, 0.25)',
       },
       blur: {
         'sm': '2px',

@@ -51,7 +51,7 @@ const Hero = () => {
                             <input
                                 type="email"
                                 placeholder="Enter your email"
-                                className="w-full outline-none p-[20px] text-sm md:text-lg text-[#1c1c1c] bg-transparent border-none overflow-hidden h-full rounded-[20px]"
+                                className="w-full outline-none p-[20px] text-sm md:text-lg text-[#1c1c1c] dark:text-white bg-transparent border-none overflow-hidden h-full rounded-[20px]"
                             />
                         </div>
                     </div>
@@ -69,17 +69,17 @@ const Hero = () => {
                 <a
                     href="https://x.com/"
                     target="_blank"
-                    className="hero-socialicon p-[3px]"
+                    className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
                 >
                     <div className="p-[10px]">
-                        <img src={Twitter} alt="Twitter" className="h-7" />
+                        <img src={Twitter} alt="Twitter" className="h-7 w-7" />
                     </div>
                 </a>
 
                 <a
                     href="https://www.linkedin.com/"
                     target="_blank"
-                    className="hero-socialicon p-[3px]"
+                    className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
                 >
                     <div className="p-[10px]">
                         <img src={LinkedIn} alt="LinkedIn" className="h-7" />
@@ -89,7 +89,7 @@ const Hero = () => {
                 <a
                     href="https://www.instagram.com/"
                     target="_blank"
-                    className="hero-socialicon p-[3px]"
+                    className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
                 >
                     <div className="p-[10px]">
                         <img src={Instagram} alt="Instagram" className="h-7" />
@@ -99,7 +99,7 @@ const Hero = () => {
                 <a
                     href="https://www.instagram.com/"
                     target="_blank"
-                    className="hero-socialicon p-[3px]"
+                    className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
                 >
                     <div className="p-[10px]">
                         <img src={Facebook} alt="Facebook" className="h-7" />

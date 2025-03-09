@@ -61,28 +61,44 @@ const Footer = () => {
                 <p className='text-[#4d4d4d] text-sm md:text-base dark:text-white'>© 2024 All Rights Reserved</p>
 
                 {/* Social Icons  */}
-                <div className='flex justify-center items-center gap-[10px]'>
-                    <a href="https://x.com/" target='_blank' className='hero-socialicon p-[3px]'>
-                        <div className='p-[10px]'>
-                            <img src={Twitter} alt="Twitter" className='h-7' />
+                <div className="flex justify-center items-center gap-[10px]">
+                    <a
+                        href="https://x.com/"
+                        target="_blank"
+                        className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+                    >
+                        <div className="p-[10px]">
+                            <img src={Twitter} alt="Twitter" className="h-7 w-7" />
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/" target='_blank' className='hero-socialicon p-[3px]'>
-                        <div className='p-[10px]'>
-                            <img src={LinkedIn} alt="LinkedIn" className='h-7' />
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+                    >
+                        <div className="p-[10px]">
+                            <img src={LinkedIn} alt="LinkedIn" className="h-7" />
                         </div>
                     </a>
 
-                    <a href="https://www.instagram.com/" target='_blank' className='hero-socialicon p-[3px]'>
-                        <div className='p-[10px]'>
-                            <img src={Instagram} alt="Instagram" className='h-7' />
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+                    >
+                        <div className="p-[10px]">
+                            <img src={Instagram} alt="Instagram" className="h-7" />
                         </div>
                     </a>
 
-                    <a href="https://www.instagram.com/" target='_blank' className='hero-socialicon p-[3px]'>
-                        <div className='p-[10px]'>
-                            <img src={Facebook} alt="Facebook" className='h-7' />
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+                    >
+                        <div className="p-[10px]">
+                            <img src={Facebook} alt="Facebook" className="h-7" />
                         </div>
                     </a>
                 </div>

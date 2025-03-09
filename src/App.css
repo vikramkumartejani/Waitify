@@ -76,42 +76,6 @@ body {
   transition: ease-in-out 0.3s;
 }
 
-
-/* --------------------------------------- testimoials  */
-.testimoials-box {
-  background-color: rgb(236, 237, 241);
-  width: 100%;
-  opacity: 1;
-  border-radius: 23px;
-  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255),
-    3px 3px 6px 0px rgba(0, 125, 252, 0.15);
-}
-
-.testimoials-box-header {
-  background-color: rgb(236, 237, 241);
-  opacity: 1;
-  border-radius: 23px;
-  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255),
-    3px 3px 6px 0px rgba(0, 125, 252, 0.15);
-}
-
-.testimoials-box-img {
-  background-color: rgb(236, 237, 241);
-  opacity: 1;
-  border-radius: 10px;
-  box-shadow: -2px -2px 4px 0px rgb(250, 251, 255),
-    2px 2px 4px 0px rgba(0, 125, 252, 0.15);
-}
-
-.testimoials-box-socialicons {
-  background-color: rgb(236, 237, 241);
-  border-radius: 15px;
-  box-shadow: -2px -2px 4px 0px rgb(250, 251, 255),
-    2px 2px 4px 0px rgba(0, 125, 252, 0.15);
-  opacity: 1;
-}
-
-
 /* ---------------------------- Partners  */
 .partners-box {
   border: 2px solid #007DFC0D;
@@ -122,13 +86,4 @@ body {
   position: relative;
   width: 100%;
   will-change: transform;
-}
-
-/* ---------------------------------- Hero  */
-.hero-socialicon {
-  background-color: rgb(236, 237, 241);
-  border-radius: 20px;
-  box-shadow: -2px -2px 4px 0px rgb(250, 251, 255),
-    2px 2px 4px 0px rgba(0, 125, 252, 0.15);
-  opacity: 1;
 }
