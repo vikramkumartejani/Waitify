@@ -81,9 +81,12 @@ const Hero = () => {
         <a
           href="https://x.com/"
           target="_blank"
-          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
         >
-          <div className="p-[10px]">
+          <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+            <img src={Twitter} alt="Twitter" className="h-7 w-7" />
+          </div>
+          <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
             <img src={Twitter} alt="Twitter" className="h-7 w-7" />
           </div>
         </a>
@@ -91,9 +94,12 @@ const Hero = () => {
         <a
           href="https://www.linkedin.com/"
           target="_blank"
-          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
         >
-          <div className="p-[10px]">
+          <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+            <img src={LinkedIn} alt="LinkedIn" className="h-7" />
+          </div>
+          <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
             <img src={LinkedIn} alt="LinkedIn" className="h-7" />
           </div>
         </a>
@@ -101,19 +107,25 @@ const Hero = () => {
         <a
           href="https://www.instagram.com/"
           target="_blank"
-          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
         >
-          <div className="p-[10px]">
+          <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+            <img src={Instagram} alt="Instagram" className="h-7" />
+          </div>
+          <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
             <img src={Instagram} alt="Instagram" className="h-7" />
           </div>
         </a>
 
         <a
-          href="https://www.instagram.com/"
+          href="https://www.facebook.com/"
           target="_blank"
-          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px]"
+          className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
         >
-          <div className="p-[10px]">
+          <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+            <img src={Facebook} alt="Facebook" className="h-7" />
+          </div>
+          <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
             <img src={Facebook} alt="Facebook" className="h-7" />
           </div>
         </a>
