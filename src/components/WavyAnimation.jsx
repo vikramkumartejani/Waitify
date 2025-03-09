@@ -2,6 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Integrations1 from '../assets/integrations1.svg'
+import Integrations2 from '../assets/integrations2.svg'
+import Integrations3 from '../assets/integrations3.svg'
+import Integrations4 from '../assets/integrations4.svg'
+import Integrations5 from '../assets/integrations5.svg'
+import Integrations6 from '../assets/integrations6.svg'
+import Integrations7 from '../assets/integrations7.svg'
+import Integrations8 from '../assets/integrations8.svg'
 
 export default function WavyAnimation() {
   const [centerCompressed, setCenterCompressed] = useState(false);
@@ -10,9 +18,7 @@ export default function WavyAnimation() {
   const [waveCount, setWaveCount] = useState(0);
   const [buttonPressed, setButtonPressed] = useState(false);
 
-  // Start initial animations and set up wave pattern
   useEffect(() => {
-    // Initial center compression
     setTimeout(() => {
       setCenterCompressed(true);
       setTimeout(() => {
@@ -254,160 +260,35 @@ function getIcon(type) {
   switch (type) {
     case "overlap":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 6C12 6 16 10 16 14C16 17.3137 14.2091 20 12 20C9.79086 20 8 17.3137 8 14C8 10 12 6 12 6Z"
-            fill="#8B5CF6"
-          />
-          <path
-            d="M12 6C12 6 8 10 8 14C8 17.3137 9.79086 20 12 20C14.2091 20 16 17.3137 16 14C16 10 12 6 12 6Z"
-            fill="#EC4899"
-          />
-        </svg>
+       <img src={Integrations1} alt="integrations" />
       );
     case "stripes":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 4L20 20"
-            stroke="#4F46E5"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M16 4L4 16"
-            stroke="#4F46E5"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M20 8L8 20"
-            stroke="#4F46E5"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
+        <img src={Integrations2} alt="integrations" />
       );
     case "star":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 4L14.5 9.5L20 12L14.5 14.5L12 20L9.5 14.5L4 12L9.5 9.5L12 4Z"
-            fill="black"
-          />
-        </svg>
+        <img src={Integrations3} alt="integrations" />
       );
     case "lightning":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="12" cy="12" r="10" fill="#3B82F6" />
-          <path d="M13 6L7 13H11L11 18L17 11H13L13 6Z" fill="white" />
-        </svg>
+        <img src={Integrations4} alt="integrations" />
       );
     case "globe":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="12" cy="12" r="10" fill="#8B5CF6" />
-          <path
-            d="M12 2C12 2 16 6 16 12C16 18 12 22 12 22"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <path
-            d="M12 2C12 2 8 6 8 12C8 18 12 22 12 22"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <path d="M2 12H22" stroke="white" strokeWidth="2" />
-        </svg>
+        <img src={Integrations5} alt="integrations" />
       );
     case "waves":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 10C6 8 8 8 10 10C12 12 14 12 16 10C18 8 20 8 22 10"
-            stroke="#3B82F6"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 14C6 12 8 12 10 14C12 16 14 16 16 14C18 12 20 12 22 14"
-            stroke="#3B82F6"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 18C6 16 8 16 10 18C12 20 14 20 16 18C18 16 20 16 22 18"
-            stroke="#3B82F6"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
+        <img src={Integrations6} alt="integrations" />
       );
     case "squares":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="4" y="4" width="6" height="6" rx="1" fill="black" />
-          <rect x="14" y="4" width="6" height="6" rx="1" fill="black" />
-          <rect x="4" y="14" width="6" height="6" rx="1" fill="black" />
-          <rect x="14" y="14" width="6" height="6" rx="1" fill="black" />
-        </svg>
+        <img src={Integrations7} alt="integrations" />
       );
     case "stack":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="6" y="6" width="12" height="4" rx="1" fill="#3B82F6" />
-          <rect x="6" y="12" width="12" height="4" rx="1" fill="#3B82F6" />
-          <rect x="6" y="18" width="12" height="4" rx="1" fill="#3B82F6" />
-        </svg>
+        <img src={Integrations8} alt="integrations" />
       );
     default:
       return null;
