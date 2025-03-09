@@ -33,13 +33,13 @@ const Hero = () => {
             </div>
 
             {/* Form  */}
-            <div className="hero-box py-6 md:py-[50px] px-6 md:px-[100px] max-w-[330px] md:max-w-[800px] w-full mx-auto flex flex-col gap-[18px] md:gap-7 rounded-[45px] md:rounded-[50px]">
+            <div className="shadow-hero-box-shadow dark:shadow-hero-box-shadow-dark bg-[#ecedf1] dark:bg-black/10 overflow-hidden relative border-2 border-[#007DFC0D] py-6 md:py-[50px] px-6 md:px-[100px] max-w-[330px] md:max-w-[800px] w-full mx-auto flex flex-col items-center gap-[18px] md:gap-7 rounded-[45px] md:rounded-[50px]">
                 <div>
-                    <h2 className="text-[#1c1c1c] text-2xl md:text-[40px] font-semibold leading-[1.4em] text-center mb-[10px]">
+                    <h2 className="text-[#1c1c1c] dark:text-white text-2xl md:text-[40px] font-semibold leading-[1.4em] text-center mb-[10px]">
                         Join our waitlist
                     </h2>
 
-                    <p className="text-[#4d4d4d] text-sm md:text-lg text-center">
+                    <p className="text-[#4d4d4d] dark:text-white/90 text-sm md:text-lg text-center">
                         Be the first to experience Nexora. Join the waitlist today for early
                         access and updates.
                     </p>
@@ -56,8 +56,8 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="hero-form-btn w-fit mx-auto">
-                        <button className="text-center py-3 px-6 text-[#4d4d4d] text-sm md:text-lg w-fit mx-auto hover:text-[#007dfc] transition-all duration-300">
+                    <div className="shadow-hero-btn dark:shadow-hero-btn-dark rounded-[100px] bg-custom-white dark:bg-black opacity-100 w-fit mx-auto">
+                        <button className="text-center py-3 px-6 text-[#4d4d4d] dark:text-white text-sm md:text-lg w-fit mx-auto hover:text-[#007dfc] transition-all duration-300">
                             Join
                         </button>
                     </div>

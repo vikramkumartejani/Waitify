@@ -116,11 +116,9 @@ body {
 
 /* ---------------------------- Partners  */
 .partners-box {
-  border: 2px solid rgba(0, 125, 252, 0.05);
+  border: 2px solid #007DFC0D;
   background-color: #ecedf1;
-  box-shadow: 0 0.3010936508871964px 0.9032809526615893px -0.8333333333333333px #007dfc0d,
-    0 1.1442666516217286px 3.4327999548651857px -1.6666666666666665px #007dfc0d,
-    0 5px 15px -2.5px #007dfc0d;
+  box-shadow: 0 0.3010px 0.9032px -0.8333px #007dfc0d, 0 1.1442px 3.4327px -1.6666px #007dfc0d, 0 5px 15px -2.5px #007dfc0d;
   flex: none;
   overflow: hidden;
   position: relative;
@@ -129,24 +127,8 @@ body {
 }
 
 /* ---------------------------------- Hero  */
-.hero-box {
-  border: 2px solid rgba(0, 125, 252, 0.05);
-  align-content: center;
-  align-items: center;
-  background-color: #ecedf1;
-  box-shadow: 0 0.6021873017743928px 1.8065619053231785px -0.8333333333333333px #007dfc0d,
-    0 2.288533303243457px 6.8655999097303715px -1.6666666666666665px #007dfc0d,
-    0 10px 30px -2.5px #007dfc0d;
-  overflow: hidden;
-  position: relative;
-}
-
 .hero-form-btn {
-  background-color: rgb(236, 237, 241);
-  opacity: 1;
-  border-radius: 100px;
-  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255),
-    3px 3px 6px 0px rgba(0, 125, 252, 0.15);
+  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255), 3px 3px 6px 0px rgba(0, 125, 252, 0.15);
 }
 
 .hero-socialicon {
