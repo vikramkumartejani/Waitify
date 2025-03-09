@@ -128,7 +128,7 @@ const Faqs = () => {
                 </p>
             </div>
 
-            <div className="space-y-[5px] max-w-[800px] mx-auto w-full text-black bg-custom-white dark:bg-black border-white rounded-[30px] opacity-100 shadow-faq-box dark:shadow-faq-box-dark p-[5px]">
+            <div className="space-y-[5px] max-w-[800px] mx-auto w-full text-black bg-custom-white dark:bg-gray-800 border-white rounded-[30px] opacity-100 shadow-faq-box dark:shadow-faq-box-dark p-[5px]">
                 {faqData.map((faq, index) => (
                     <FaqItem
                         key={index}

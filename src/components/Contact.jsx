@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="flex flex-col justify-center items-center gap-3 mb-10">
         <SectionTitle text={ContactTitle} />
 
-        <h1 className="font-semibold text-2xl md:text-[40px] mt-1 text-center text-[#1c1c1c] dark:text-white">
+        <h1 className="mt-3 font-semibold text-2xl md:text-[40px] text-center text-[#1c1c1c] dark:text-white">
           Let's <span className="text-[#007dfc]">Stay Connected</span>
         </h1>
 
