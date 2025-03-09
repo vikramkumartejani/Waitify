@@ -28,57 +28,41 @@ export default function WavyAnimation() {
     }, 1000);
 
     return () => {
-      // Clear any pending timeouts when component unmounts
     };
   }, []);
 
-  // Function to handle the complete wave emission cycle
   const startWaveEmissionCycle = () => {
-    // First animate the button press
     setButtonPressed(true);
 
-    // After button press animation, start the waves
     setTimeout(() => {
       setButtonPressed(false);
       setShowWaves(true);
       startWaveEmission();
-    }, 300); // Button press animation duration
+    }, 300); 
   };
 
-  // Function to handle wave emission cycle
   const startWaveEmission = () => {
-    // Start a cycle of waves
     setIsEmitting(true);
 
-    // Calculate total time for all waves to complete
-    // Last wave starts at 5 * 0.2 = 1.0s and takes 1.2s to complete
-    // So all waves will be done by 1.0 + 1.2 = 2.2s
-    // Add a small buffer to ensure all animations complete
     const totalWaveTime = 2.3;
 
-    // After all waves complete, stop emitting
     const waveSetTimeout = setTimeout(() => {
-      // Instead of immediately stopping emission, let's create a clean transition
-      // by removing waves only after they've all completed
       setIsEmitting(false);
 
-      // Wait 3 seconds with no waves, then start the next cycle
       const pauseTimeout = setTimeout(() => {
-        setWaveCount((prev) => prev + 1); // Increment to trigger a new wave set
+        setWaveCount((prev) => prev + 1);  
 
-        // Animate button press before starting next wave set
         startWaveEmissionCycle();
-      }, 3000); // 3 second pause with no waves
+      }, 3000); 
 
       return () => clearTimeout(pauseTimeout);
-    }, totalWaveTime * 1000); // Convert to milliseconds, with buffer
+    }, totalWaveTime * 1000);  
 
     return () => clearTimeout(waveSetTimeout);
   };
 
   return (
     <div className="relative w-[600px] h-[600px] flex items-center justify-center mx-auto">
-      {/* Main container with 3D border */}
       <div
         className="absolute w-[600px] h-[600px] rounded-full"
         style={{
@@ -89,7 +73,6 @@ export default function WavyAnimation() {
         }}
       />
 
-      {/* Inner circle with 2px border */}
       <div
         className="absolute w-[560px] h-[560px] rounded-full"
         style={{
@@ -100,45 +83,43 @@ export default function WavyAnimation() {
         }}
       />
 
-      {/* Wave animations */}
       <AnimatePresence mode="wait">
         {showWaves && isEmitting && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            {/* Create 6 waves with staggered starts */}
             {Array.from({ length: 6 }).map((_, index) => (
               <motion.div
                 key={`wave-${waveCount}-${index}`}
                 className="absolute rounded-full"
                 initial={{
                   scale: 0.2,
-                  opacity: 1, // Start with full opacity for stronger waves
+                  opacity: 1, 
                 }}
                 animate={{
                   scale: [0.2, 1],
-                  opacity: [1, 0.2], // Keep waves stronger throughout animation
+                  opacity: [1, 0.2], 
                 }}
                 exit={{
                   opacity: 0,
                   transition: { duration: 0.2 },
                 }}
                 transition={{
-                  duration: 1.2, // Each wave completes in 1.2 seconds
-                  ease: "linear", // Linear for consistent speed
-                  delay: index * 0.2, // Stagger each wave by 0.2s
+                  duration: 1.2,  
+                  ease: "linear", 
+                  delay: index * 0.2,  
                   times: [0, 1],
                 }}
                 style={{
                   width: "570px",
                   height: "570px",
-                  filter: "blur(4px)", // Reduced blur for sharper waves
+                  filter: "blur(4px)",  
                   boxShadow: `
                     -5px -5px 10px 0px rgba(250, 251, 255, 0.9),
                     inset -5px -5px 10px 0px rgba(250, 251, 255, 0.9),
                     5px 5px 10px 0px rgba(0, 125, 252, 0.3),
                     inset 5px 5px 10px 0px rgba(0, 125, 252, 0.3)
-                  `, // Increased shadow intensity
+                  `,  
                   transformOrigin: "center center",
-                  border: "1px solid rgba(0, 125, 252, 0.2)", // Stronger border
+                  border: "1px solid rgba(0, 125, 252, 0.2)", 
                 }}
               />
             ))}
@@ -146,7 +127,6 @@ export default function WavyAnimation() {
         )}
       </AnimatePresence>
 
-      {/* Center icon with compression animation */}
       <motion.div
         className="absolute z-10  rounded-full p-4"
         animate={{
@@ -172,7 +152,7 @@ export default function WavyAnimation() {
         }}
       >
         <div className="flex items-center justify-center">
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="w-full h-full" />
         </div>
       </motion.div>
 
