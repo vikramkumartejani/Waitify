@@ -111,7 +111,7 @@ const Header = () => {
                     isDarkTheme ? "text-white" : "text-[#1c1c1c]"
                   } ${
                     isScrolled
-                      ? "opacity-0 scale-90 w-0 lg:overflow-hidden transition-opacity duration-500 ease-in-out"
+                      ? "lg:opacity-0 scale-90 w-0 lg:overflow-hidden transition-opacity duration-500 ease-in-out"
                       : "opacity-100 scale-100 w-auto transition-opacity duration-500 ease-in-out"
                   }`}
                 >
