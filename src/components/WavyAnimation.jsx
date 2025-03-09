@@ -117,9 +117,9 @@ export default function WavyAnimation() {
                     inset -5px -5px 10px 0px rgba(250, 251, 255, 0.9),
                     5px 5px 10px 0px rgba(0, 125, 252, 0.3),
                     inset 5px 5px 10px 0px rgba(0, 125, 252, 0.3)
-                  `,  
+                  `, // Increased shadow intensity
                   transformOrigin: "center center",
-                  border: "1px solid rgba(0, 125, 252, 0.2)", 
+                  border: "1px solid rgba(0, 125, 252, 0.2)", // Stronger border
                 }}
               />
             ))}
@@ -127,6 +127,7 @@ export default function WavyAnimation() {
         )}
       </AnimatePresence>
 
+      {/* Center icon with compression animation */}
       <motion.div
         className="absolute z-10  rounded-full p-4"
         animate={{
@@ -152,7 +153,7 @@ export default function WavyAnimation() {
         }}
       >
         <div className="flex items-center justify-center">
-          <img src={Logo} alt="logo" className="w-full h-full" />
+          <img src={Logo} alt="logo" />
         </div>
       </motion.div>
 

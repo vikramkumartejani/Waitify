@@ -138,7 +138,8 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="lg:hidden block">
+              <div className="lg:hidden flex items-center gap-4">
+              <ThemeToggle />
                 <button
                   className="flex items-center justify-center"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
