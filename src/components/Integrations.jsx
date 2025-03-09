@@ -7,7 +7,7 @@ const Integrations = () => {
 
   return (
     <section id="integrations" className="py-[70px] md:py-[100px] px-5">
-      <div className="flex flex-col justify-center items-center gap-3 mb-10">
+      <div className="flex flex-col justify-center items-center gap-3 mb-20">
         <SectionTitle text={integrationTitle} />
 
         <h1 className="font-semibold text-2xl md:text-[40px] mt-3 text-center text-[#1c1c1c] dark:text-white">

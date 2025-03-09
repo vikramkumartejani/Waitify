@@ -10,12 +10,10 @@ const Header = () => {
 
     const navLinks = ['Benefits', 'Integrations', 'Testimonials', 'FAQ'];
 
-    // Add scroll event listener for header sizing
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 650);
             
-            // Check if we're not on any section and reset active state
             const isOnAnySection = navLinks.some(link => {
                 const element = document.getElementById(link.toLowerCase());
                 if (!element) return false;
@@ -36,22 +34,18 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [navLinks]);
 
-    // Add observer to track which section is in view
     useEffect(() => {
         const observerOptions = {
             root: null,
             rootMargin: '-20% 0px -20% 0px',
-            threshold: 0.4, // Section is considered in view when 40% visible
+            threshold: 0.4, 
         };
 
         const observerCallback = (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Remove the '#' from the id to match our navLinks
                     setActiveSection(entry.target.id);
                 } else if (activeSection === entry.target.id) {
-                    // If we're leaving this section and it was active, clear the active state
-                    // We'll only do this if no other section becomes active
                     const anyVisible = document.querySelectorAll('.section-observed').length > 0;
                     if (!anyVisible) {
                         setActiveSection('');
@@ -62,7 +56,6 @@ const Header = () => {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        // Observe all sections that correspond to nav links
         navLinks.forEach(link => {
             const element = document.getElementById(link.toLowerCase());
             if (element) {

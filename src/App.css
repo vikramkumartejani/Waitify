@@ -18,21 +18,6 @@ body {
   font-family: "Instrument Sans", sans-serif;
 }
 
-:root {
-  --framer-input-box-shadow: inset -2px -2px 4px 0px rgba(250, 251, 255, 1),
-    inset 2px 2px 4px 0px rgba(0, 125, 252, 0.15);
-  --framer-input-background: var(#ecedf1);
-  --background-color: #ecedf1;
-  --text-color: #000000;
-  --box-shadow-color: rgba(0, 125, 252, 0.15);
-}
-
-.dark-theme {
-  --background-color: #1e1e1e;
-  --text-color: #ffffff;
-  --box-shadow-color: rgba(255, 255, 255, 0.15);
-}
-
 /* Header */
 .header-shadow {
   background-color: rgb(236, 237, 241);
@@ -76,14 +61,3 @@ body {
   transition: ease-in-out 0.3s;
 }
 
-/* ---------------------------- Partners  */
-.partners-box {
-  border: 2px solid #007DFC0D;
-  background-color: #ecedf1;
-  box-shadow: 0 0.3010px 0.9032px -0.8333px #007dfc0d, 0 1.1442px 3.4327px -1.6666px #007dfc0d, 0 5px 15px -2.5px #007dfc0d;
-  flex: none;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  will-change: transform;
-}

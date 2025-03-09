@@ -25,6 +25,7 @@ module.exports = {
         'inside-input-shadow': 'inset -2px -2px 4px 0px rgba(250, 251, 255, 1), inset 2px 2px 4px 0px rgba(0, 125, 252, 0.15)',
         'social-icons': '-2px -2px 4px 0px rgb(250, 251, 255), 2px 2px 4px 0px rgba(0, 125, 252, 0.15)',
         'header-testimonials': '-3px -3px 6px 0px  rgb(250, 251, 255), 3px 3px 6px 0px  rgba(0, 125, 252, 0.15)',
+        'our-partners': ' 0 0.3010px 0.9032px -0.8333px #007dfc0d, 0 1.1442px 3.4327px -1.6666px #007dfc0d, 0 5px 15px -2.5px #007dfc0d',
         
         // Dark Shadows
         'hero-box-shadow-dark': '0 0.6021px 1.8065px -0.8333px rgba(0, 125, 252, 0.2), 0 2.2885px 6.8655px -1.6666px rgba(0, 125, 252, 0.2), 0 10px 30px -2.5px rgba(0, 125, 252, 0.2)',
