@@ -63,20 +63,16 @@ const Header = () => {
       <nav className="fixed top-5 left-0 right-0 z-50">
         <div
           className={`
-                    mx-auto 
-                    ${
-                      isDarkTheme
-                        ? "header-shadow-dark bg-[#1c1c1c]"
-                        : "header-shadow bg-white"
-                    } 
-                    p-1 z-50 relative
-                    transition-all duration-700 ease-in-out
-                    ${
-                      isScrolled
-                        ? "w-[700px] scale-95 rounded-full"
-                        : "w-full max-w-6xl scale-100"
-                    }
-                `}
+    mx-auto 
+    ${
+      isDarkTheme ? "header-shadow-dark bg-[#1c1c1c]" : "header-shadow bg-white"
+    } 
+    p-1 z-50 relative min-w-0
+    transition-all duration-700 ease-in-out
+    ${
+      isScrolled ? "max-w-[700px] scale-95 rounded-full" : "max-w-6xl scale-100"
+    }
+`}
         >
           <div className="header-inner-shadow py-[10px] pl-[15px] pr-[10px] flex items-center justify-between gap-4 w-full">
             {/* Logo */}
