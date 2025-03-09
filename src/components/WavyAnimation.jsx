@@ -6,24 +6,68 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function WavyAnimation() {
   const [centerCompressed, setCenterCompressed] = useState(false);
   const [showWaves, setShowWaves] = useState(false);
-  const [waveSequence, setWaveSequence] = useState(0);
+  const [isEmitting, setIsEmitting] = useState(false);
+  const [waveCount, setWaveCount] = useState(0);
+  const [buttonPressed, setButtonPressed] = useState(false);
 
-  // Start initial animations
+  // Start initial animations and set up wave pattern
   useEffect(() => {
+    // Initial center compression
     setTimeout(() => {
       setCenterCompressed(true);
       setTimeout(() => {
-        setShowWaves(true);
-      }, 1000);
+        startWaveEmissionCycle();
+      }, 500);
     }, 1000);
 
-    // Set up interval for wave sequences
-    const intervalId = setInterval(() => {
-      setWaveSequence((prev) => (prev + 1) % 3); // Cycle through 3 states
-    }, 4000); // Every 4 seconds
-
-    return () => clearInterval(intervalId);
+    return () => {
+      // Clear any pending timeouts when component unmounts
+    };
   }, []);
+
+  // Function to handle the complete wave emission cycle
+  const startWaveEmissionCycle = () => {
+    // First animate the button press
+    setButtonPressed(true);
+
+    // After button press animation, start the waves
+    setTimeout(() => {
+      setButtonPressed(false);
+      setShowWaves(true);
+      startWaveEmission();
+    }, 300); // Button press animation duration
+  };
+
+  // Function to handle wave emission cycle
+  const startWaveEmission = () => {
+    // Start a cycle of waves
+    setIsEmitting(true);
+
+    // Calculate total time for all waves to complete
+    // Last wave starts at 5 * 0.2 = 1.0s and takes 1.2s to complete
+    // So all waves will be done by 1.0 + 1.2 = 2.2s
+    // Add a small buffer to ensure all animations complete
+    const totalWaveTime = 2.3;
+
+    // After all waves complete, stop emitting
+    const waveSetTimeout = setTimeout(() => {
+      // Instead of immediately stopping emission, let's create a clean transition
+      // by removing waves only after they've all completed
+      setIsEmitting(false);
+
+      // Wait 3 seconds with no waves, then start the next cycle
+      const pauseTimeout = setTimeout(() => {
+        setWaveCount((prev) => prev + 1); // Increment to trigger a new wave set
+
+        // Animate button press before starting next wave set
+        startWaveEmissionCycle();
+      }, 3000); // 3 second pause with no waves
+
+      return () => clearTimeout(pauseTimeout);
+    }, totalWaveTime * 1000); // Convert to milliseconds, with buffer
+
+    return () => clearTimeout(waveSetTimeout);
+  };
 
   return (
     <div className="relative w-[600px] h-[600px] flex items-center justify-center mx-auto">
@@ -49,40 +93,45 @@ export default function WavyAnimation() {
         }}
       />
 
-      {/* Wave animations - only show when triggered */}
-      <AnimatePresence>
-        {showWaves && waveSequence === 0 && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            {Array.from({ length: 10 }).map((_, index) => (
+      {/* Wave animations */}
+      <AnimatePresence mode="wait">
+        {showWaves && isEmitting && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Create 6 waves with staggered starts */}
+            {Array.from({ length: 6 }).map((_, index) => (
               <motion.div
-                key={`wave1-${index}`}
+                key={`wave-${waveCount}-${index}`}
                 className="absolute rounded-full"
                 initial={{
                   scale: 0.2,
-                  opacity: 0,
+                  opacity: 1, // Start with full opacity for stronger waves
                 }}
                 animate={{
-                  scale: [0.2, 0.87, 0.83, 0.79, 0.75, 0.71, 0.67],
-                  opacity: [0.8, 0.6, 0.4, 0.2, 0],
+                  scale: [0.2, 1],
+                  opacity: [1, 0.2], // Keep waves stronger throughout animation
                 }}
-                exit={{ opacity: 0, scale: 1 }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.2 },
+                }}
                 transition={{
-                  duration: 3,
-                  ease: "easeOut",
-                  delay: index * 0.3,
-                  times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
+                  duration: 1.2, // Each wave completes in 1.2 seconds
+                  ease: "linear", // Linear for consistent speed
+                  delay: index * 0.2, // Stagger each wave by 0.2s
+                  times: [0, 1],
                 }}
                 style={{
                   width: "570px",
                   height: "570px",
-                  filter: "blur(5px)",
+                  filter: "blur(4px)", // Reduced blur for sharper waves
                   boxShadow: `
-                    -5px -5px 10px 0px rgba(250, 251, 255, 0.8),
-                    inset -5px -5px 10px 0px rgba(250, 251, 255, 0.8),
-                    5px 5px 10px 0px rgba(0, 125, 252, 0.15),
-                    inset 5px 5px 10px 0px rgba(0, 125, 252, 0.15)
-                  `,
+                    -5px -5px 10px 0px rgba(250, 251, 255, 0.9),
+                    inset -5px -5px 10px 0px rgba(250, 251, 255, 0.9),
+                    5px 5px 10px 0px rgba(0, 125, 252, 0.3),
+                    inset 5px 5px 10px 0px rgba(0, 125, 252, 0.3)
+                  `, // Increased shadow intensity
                   transformOrigin: "center center",
+                  border: "1px solid rgba(0, 125, 252, 0.2)", // Stronger border
                 }}
               />
             ))}
@@ -92,34 +141,54 @@ export default function WavyAnimation() {
 
       {/* Center icon with compression animation */}
       <motion.div
-        className="absolute z-10 bg-white rounded-full p-4"
+        className="absolute z-10  rounded-full p-4"
         animate={{
-          scale: centerCompressed ? 0.9 : 1,
+          scale: centerCompressed ? (buttonPressed ? 0.85 : 0.9) : 1,
           boxShadow: centerCompressed
-            ? "-3px -3px 6px rgba(250, 251, 255, 0.8), 3px 3px 6px rgba(0, 125, 252, 0.15)"
+            ? buttonPressed
+              ? "inset -2px -2px 5px rgba(250, 251, 255, 0.7), inset 2px 2px 5px rgba(0, 125, 252, 0.2)"
+              : "-3px -3px 6px rgba(250, 251, 255, 0.8), 3px 3px 6px rgba(0, 125, 252, 0.15)"
             : "-5px -5px 10px rgba(250, 251, 255, 0.8), 5px 5px 10px rgba(0, 125, 252, 0.15)",
         }}
         transition={{
-          duration: 0.5,
+          duration: buttonPressed ? 0.15 : 0.3,
           ease: "easeInOut",
         }}
+        style={{
+          width: "100px",
+          height: "100px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "",
+          border: "1px solid rgba(255, 255, 255, 0.7)",
+        }}
       >
-        <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <svg
-            width="32"
-            height="32"
+            width="60"
+            height="60"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-              stroke="white"
-              strokeWidth="2"
+              fill="#0080FF"
+              stroke="none"
             />
             <path
-              d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-              fill="white"
+              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M12 7V12L16 9"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>
