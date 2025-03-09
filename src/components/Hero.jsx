@@ -30,7 +30,7 @@ const Hero = () => {
           }}
         ></motion.div>
         <div className="h-10 w-10 relative z-30">
-          <img src={Logo} alt="Logo" loading="lazy" />
+          <img src={Logo} alt="Logo" loading="lazy" className="md:mt-0 mt-1.5" />
         </div>
       </div>
 

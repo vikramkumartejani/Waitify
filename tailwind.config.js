@@ -14,6 +14,8 @@ module.exports = {
         'hero-box-shadow': '0 0.6021px 1.8065px -0.8333px #007dfc0d, 0 2.2885px 6.8655px -1.6666px #007dfc0d, 0 10px 30px -2.5px #007dfc0d',
         'hero-btn': '-3px -3px 6px 0px rgb(250, 251, 255), 3px 3px 6px 0px rgba(0, 125, 252, 0.15)',
         'header-shadow': '-3px -3px 6px 0px rgb(250, 251, 255), 3px 3px 6px 0px rgba(0, 125, 252, 0.15)',
+        'header-inner-shadow': '-2px -2px 4px 0px rgb(250, 251, 255), inset 2px 2px 4px 0px rgba(0, 125, 252, 0.15)',
+        'header-inner-shadow-dark': '2px -2px 4px 0px rgb(10, 12, 18), inset 2px 2px 4px 0px rgba(41, 88, 136, 0.25)',
         'hero-logo': '-5.92901px -5.92901px 11.85802px 0px rgb(250, 251, 255), inset -2.96451px -2.96451px 5.92901px 0px rgb(250, 251, 255), 5.92901px 5.92901px 11.85802px 0px rgba(0, 125, 252, 0.15), inset 2.96451px 2.96451px 5.92901px 0px rgba(0, 125, 252, 0.15)',
         'section-title': '-3px -3px 6px 0px rgb(250, 251, 255), inset -3px -3px 6px 0px rgb(250, 251, 255), 3px 3px 6px 0px rgba(0, 125, 252, 0.15), inset 3px 3px 6px 0px rgba(0, 125, 252, 0.15)',
         'section-title-inside': '-2px -2px 4px 0px  rgb(250, 251, 255), 2px 2px 4px 0px  rgba(0, 125, 252, 0.15)',

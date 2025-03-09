@@ -147,7 +147,6 @@ export default function WavyAnimation() {
           <img src={Logo} alt="logo" className="w-full h-full object-contain" />
         </div>
       </motion.div>
-      {/* Surrounding icons with responsive positioning */}
       <div className="absolute w-[93%] h-[93%]">
         <IconPosition position="top" icon="overlap" />
         <IconPosition position="top-right" icon="stripes" />
@@ -162,9 +161,7 @@ export default function WavyAnimation() {
   );
 }
 
-// Helper component for responsive icon positioning
 function IconPosition({ position, icon }) {
-  // Define positioning based on the position prop
   let positionStyles = {};
   
   switch (position) {

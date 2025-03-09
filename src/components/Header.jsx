@@ -87,28 +87,28 @@ const Header = () => {
     <div className="relative">
       <nav className="fixed -top-1 lg:top-5 left-0 right-0 z-50 lg:px-4">
         <div
-          className={`mx-auto bg-custom-white ${
+          className={`mx-auto bg-custom-white dark:bg-gray-900 ${
             isMobileMenuOpen ? "rounded-b-[25px]" : "rounded-0 lg:rounded-[50px]"
-          }  shadow-header-shadow p-1 z-50 relative min-w-full lg:min-w-0 transition-all duration-700 ease-in-out ${
+          }  shadow-header-shadow dark:shadow-none p-1 z-50 relative min-w-full lg:min-w-0 transition-all duration-700 ease-in-out ${
             isScrolled
               ? "w-full max-w-full lg:max-w-[700px] lg:scale-95 lg:rounded-full"
               : "w-full max-w-full lg:max-w-6xl scale-100"
           }`}
         >
           <div
-            className={`header-inner-shadow ${
+            className={`shadow-header-inner-shadow dark:shadow-header-inner-shadow-dark bg-custom-white dark:bg-gray-900 ${
               isMobileMenuOpen
-                ? "rounded-b-[25px]"
+                ? "rounded-b-[25px] "
                 : "rounded-0 lg:rounded-[50px]"
             }`}
           >
-            <div className=" lg:rounded-[50px] py-[10px] pl-[15px] pr-[10px] flex items-center justify-between gap-4 w-full">
+            <div className=" lg:rounded-[50px] pt-[14px] pb-[10px] sm:py-[10px] pl-[15px] pr-[10px] flex items-center justify-between gap-4 w-full">
               {/* Logo  */}
               <a href="#hero" className="flex items-center gap-[5px]">
-                <img src={Logo} alt="Logo" loading="lazy" className="h-10" />
+                <img src={Logo} alt="Logo" loading="lazy" className="h-10 min-w-10" />
                 <span
                   className={`text-3xl lg:text-2xl font-semibold ${
-                    isDarkTheme ? "text-white" : "text-[#1c1c1c]"
+                    isDarkTheme ? "text-white" : "text-[#1c1c1c] dark:text-white"
                   } ${
                     isScrolled
                       ? "lg:opacity-0 scale-90 w-0 lg:overflow-hidden transition-opacity duration-500 ease-in-out"
@@ -120,17 +120,17 @@ const Header = () => {
               </a>
 
               {/* NavLinks */}
-              <div className="hidden lg:flex gap-[5px]">
+              <div className="hidden lg:flex gap-[7px]">
                 {navLinks.map((link) => (
                   <a
                     key={link}
                     href={`#${link.toLowerCase()}`}
-                    className={`nav-link px-6 py-3 font-normal leading-[1.2em] text-base transition-all duration-300 ease-in-out ${
+                    className={`nav-link hover:shadow-section-title-inside dark:hover:shadow-section-title-inside-dark px-5 py-3 font-normal leading-[1.2em] text-base transition-all duration-300 ease-in-out ${
                       activeSection === link.toLowerCase()
                         ? "bg-[#007DFC] text-white rounded-[50px]"
                         : isDarkTheme
                         ? "text-white"
-                        : "text-[#1c1c1c]"
+                        : "text-[#1c1c1c] dark:text-white"
                     }`}
                   >
                     {link}
@@ -157,7 +157,7 @@ const Header = () => {
                 <button>
                   {isScrolled ? (
                     <div
-                      className={`header-btn p-[10px] rounded-full flex items-center justify-center transition-opacity duration-500 ease-in-out ${
+                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white dark:bg-gray-800 w-12 h-12 rounded-full p-[10px] flex items-center justify-center transition-opacity duration-500 ease-in-out ${
                         isScrolled ? "opacity-100" : "opacity-0"
                       }`}
                     >
@@ -170,8 +170,8 @@ const Header = () => {
                     </div>
                   ) : (
                     <div
-                      className={`header-btn px-6 py-3 ${
-                        isDarkTheme ? "text-white" : "text-[#1c1c1c]"
+                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white dark:bg-gray-800 rounded-[50px] text-nowrap px-6 py-3 ${
+                        isDarkTheme ? "text-white" : "text-[#1c1c1c] dark:text-white"
                       } font-normal leading-[1.2em] text-base transition-opacity duration-500 ease-in-out ${
                         isScrolled ? "opacity-0" : "opacity-100"
                       }`}
@@ -192,19 +192,19 @@ const Header = () => {
                     : "max-h-0 opacity-0 overflow-hidden"
                 }`}
               >
-                <div className="flex flex-col gap-[25px] items-center">
+                <div className="flex flex-col gap-[25px] items-center mt-6">
                   {navLinks.map((link) => (
                     <a
                       key={link}
                       href={`#${link.toLowerCase()}`}
-                      className="px-6 font-normal leading-[1.2em] text-[#4D4D4D] text-base transition-all duration-300 ease-in-out"
+                      className="px-6 font-normal leading-[1.2em] text-[#4D4D4D] dark:text-white/90 text-base transition-all duration-300 ease-in-out"
                     >
                       {link}
                     </a>
                   ))}
                 </div>
                 {/* Book a Call btn  */}
-                <button className="mb-2.5 mt-[25px] header-btn w-full px-6 py-3 font-normal leading-[1.2em] text-base transition-opacity duration-500 ease-in-out">
+                <button className="mb-2.5 mt-[25px] shadow-social-icons dark:shadow-social-icons-dark bg-custom-white dark:bg-gray-800 rounded-[25px] dark:text-white w-full px-6 py-3 font-normal leading-[1.2em] text-base transition-opacity duration-500 ease-in-out">
                   Book a call
                 </button>
               </div>
