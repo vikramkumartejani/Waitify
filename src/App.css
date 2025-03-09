@@ -19,18 +19,14 @@ body {
 }
 
 /* Header */
-.header-shadow {
-  background-color: rgb(236, 237, 241);
-  border-radius: 50px;
-  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255),
-    3px 3px 6px 0px rgba(0, 125, 252, 0.15);
+.header-adow {
+  box-shadow: -3px -3px 6px 0px rgb(250, 251, 255), 3px 3px 6px 0px rgba(0, 125, 252, 0.15);
   transform: none;
   transform-origin: 50% 50% 0px;
 }
 
 .header-inner-shadow {
   background-color: rgb(236, 237, 241);
-  border-radius: 50px;
   box-shadow: inset -2px -2px 4px 0px rgb(250, 251, 255),
     inset 2px 2px 4px 0px rgba(0, 125, 252, 0.15);
   transform: none;

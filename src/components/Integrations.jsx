@@ -20,7 +20,7 @@ const Integrations = () => {
           be.
         </p>
       </div>
-      <WavyAnimation />
+      {/* <WavyAnimation /> */}
     </section>
   );
 };

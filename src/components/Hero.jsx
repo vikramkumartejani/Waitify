@@ -4,6 +4,9 @@ import Twitter from "../assets/x.svg";
 import LinkedIn from "../assets/linkedIn.svg";
 import Instagram from "../assets/instagram.svg";
 import Facebook from "../assets/facebook.svg";
+import LinkedInHover from "../assets/hover-linkedin.svg";
+import InstagramHover from "../assets/hover-instagram.svg";
+import FacebookHover from "../assets/hover-facebook.svg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -26,7 +29,7 @@ const Hero = () => {
             repeatType: "loop",
           }}
         ></motion.div>
-        <div className="h-10 w-10 relative z-40">
+        <div className="h-10 w-10 relative z-30">
           <img src={Logo} alt="Logo" loading="lazy" />
         </div>
       </div>
@@ -87,7 +90,7 @@ const Hero = () => {
             <img src={Twitter} alt="Twitter" className="h-7 w-7" />
           </div>
           <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
-            <img src={Twitter} alt="Twitter" className="h-7 w-7" />
+            <img src={Twitter} alt="Twitter" className="h-7 w-7 mt-[3px] ml-[3px]" />
           </div>
         </a>
 
@@ -100,7 +103,7 @@ const Hero = () => {
             <img src={LinkedIn} alt="LinkedIn" className="h-7" />
           </div>
           <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
-            <img src={LinkedIn} alt="LinkedIn" className="h-7" />
+            <img src={LinkedInHover} alt="LinkedIn" className="h-7 mt-[3px] ml-[3px]" />
           </div>
         </a>
 
@@ -113,7 +116,7 @@ const Hero = () => {
             <img src={Instagram} alt="Instagram" className="h-7" />
           </div>
           <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
-            <img src={Instagram} alt="Instagram" className="h-7" />
+            <img src={InstagramHover} alt="Instagram" className="h-7 mt-[3px] ml-[3px]" />
           </div>
         </a>
 
@@ -125,8 +128,8 @@ const Hero = () => {
           <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
             <img src={Facebook} alt="Facebook" className="h-7" />
           </div>
-          <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
-            <img src={Facebook} alt="Facebook" className="h-7" />
+          <div className="p-[10px] w-full absolute top-0 left-0 -translate-x-[130%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+            <img src={FacebookHover} alt="Facebook" className="h-7 mt-[3px] ml-[3px]" />
           </div>
         </a>
       </div>
