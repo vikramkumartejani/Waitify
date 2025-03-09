@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className='bg-[#ecedf1] dark:bg-black'>
+      <div className='bg-[#ecedf1] dark:bg-gray-800'>
         {children}
       </div>
     </ThemeContext.Provider>

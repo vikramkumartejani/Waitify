@@ -56,7 +56,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="shadow-hero-btn dark:shadow-hero-btn-dark rounded-[100px] bg-custom-white dark:bg-black opacity-100 w-fit mx-auto">
+                    <div className="shadow-hero-btn dark:shadow-hero-btn-dark rounded-[100px] bg-custom-white dark:bg-gray-800 opacity-100 w-fit mx-auto">
                         <button className="text-center py-3 px-6 text-[#4d4d4d] dark:text-white text-sm md:text-lg w-fit mx-auto hover:text-[#007dfc] transition-all duration-300">
                             Join
                         </button>
@@ -65,14 +65,14 @@ const Hero = () => {
             </div>
 
             {/* Social Icons  */}
-            <div className="flex justify-center items-center gap-[10px]">
+            <div className="pt-4 flex justify-center items-center gap-[10px]">
                 <a
                     href="https://x.com/"
                     target="_blank"
                     className="hero-socialicon p-[3px]"
                 >
                     <div className="p-[10px]">
-                        <img src={Twitter} alt="Twitter" className="h-6" />
+                        <img src={Twitter} alt="Twitter" className="h-7" />
                     </div>
                 </a>
 
@@ -82,7 +82,7 @@ const Hero = () => {
                     className="hero-socialicon p-[3px]"
                 >
                     <div className="p-[10px]">
-                        <img src={LinkedIn} alt="LinkedIn" className="h-6" />
+                        <img src={LinkedIn} alt="LinkedIn" className="h-7" />
                     </div>
                 </a>
 
@@ -92,7 +92,7 @@ const Hero = () => {
                     className="hero-socialicon p-[3px]"
                 >
                     <div className="p-[10px]">
-                        <img src={Instagram} alt="Instagram" className="h-6" />
+                        <img src={Instagram} alt="Instagram" className="h-7" />
                     </div>
                 </a>
 
@@ -102,7 +102,7 @@ const Hero = () => {
                     className="hero-socialicon p-[3px]"
                 >
                     <div className="p-[10px]">
-                        <img src={Facebook} alt="Facebook" className="h-6" />
+                        <img src={Facebook} alt="Facebook" className="h-7" />
                     </div>
                 </a>
             </div>
