@@ -144,9 +144,9 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                   {isMobileMenuOpen ? (
-                    <RxCross2 className="text-5xl text-[#1c1c1c] dark:text-white" />
+                    <RxCross2 className="text-3xl text-[#1c1c1c] dark:text-white" />
                   ) : (
-                    <IoMenuOutline className="text-5xl text-[#1c1c1c] dark:text-white" />
+                    <IoMenuOutline className="text-3xl text-[#1c1c1c] dark:text-white" />
                   )}
                 </button>
               </div>
