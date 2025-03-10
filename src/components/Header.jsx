@@ -89,7 +89,7 @@ const Header = () => {
         <div
           className={`mx-auto bg-custom-white dark:bg-gray-900 ${
             isMobileMenuOpen ? "rounded-b-[25px]" : "rounded-0 lg:rounded-[50px]"
-          }  shadow-header-shadow dark:shadow-none p-1 z-50 relative min-w-full lg:min-w-0 transition-all duration-700 ease-in-out ${
+          }  shadow-header-shadow dark:shadow-none p-[3px] z-50 relative min-w-full lg:min-w-0 transition-all duration-700 ease-in-out ${
             isScrolled
               ? "w-full max-w-full lg:max-w-[700px] lg:scale-95 lg:rounded-full"
               : "w-full max-w-full lg:max-w-6xl scale-100"
@@ -157,7 +157,7 @@ const Header = () => {
                 <button>
                   {isScrolled ? (
                     <div
-                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white dark:bg-gray-800 w-12 h-12 rounded-full p-[10px] flex items-center justify-center transition-opacity duration-500 ease-in-out ${
+                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white  w-12 h-12 rounded-full p-[10px] flex items-center justify-center transition-opacity duration-500 ease-in-out ${
                         isScrolled ? "opacity-100" : "opacity-0"
                       }`}
                     >
@@ -170,8 +170,8 @@ const Header = () => {
                     </div>
                   ) : (
                     <div
-                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white dark:bg-gray-800 rounded-[50px] text-nowrap px-6 py-3 ${
-                        isDarkTheme ? "text-white" : "text-[#1c1c1c] dark:text-white"
+                      className={`shadow-social-icons dark:shadow-social-icons-dark bg-custom-white  rounded-[50px] text-nowrap px-6 py-3 ${
+                        isDarkTheme ? "text-[#1C1C1C]" : "dark:text-[#1C1C1C]"
                       } font-normal leading-[1.2em] text-base transition-opacity duration-500 ease-in-out ${
                         isScrolled ? "opacity-0" : "opacity-100"
                       }`}

@@ -71,8 +71,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="shadow-hero-btn dark:shadow-hero-btn-dark rounded-[100px] bg-custom-white dark:bg-gray-800 opacity-100 w-fit mx-auto">
-            <button className="text-center py-3 px-6 text-[#4d4d4d] dark:text-white text-sm md:text-lg w-fit mx-auto hover:text-[#007dfc] transition-all duration-300">
+          <div className="shadow-hero-btn dark:shadow-hero-btn-dark rounded-[100px] bg-custom-white opacity-100 w-fit mx-auto">
+            <button className="text-center py-3.5 px-[26px] text-[#4d4d4d]  text-sm md:text-lg w-fit mx-auto hover:text-[#007dfc] transition-all duration-300">
               Join
             </button>
           </div>

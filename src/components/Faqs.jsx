@@ -54,7 +54,7 @@ const FaqItem = ({ question, answer, initialOpen = false }) => {
     }, [initialOpen])
 
     return (
-        <div className={`p-5 md:p-6 opacity-100 rounded-[25px] transition-all duration-300 ${isOpen ? "shadow-faq-open dark:shadow-faq-open-dark" : ""}`}>
+        <div className={`p-5 md:p-6 opacity-100 rounded-[25px] transition-all duration-1000 ${isOpen ? "shadow-faq-open dark:shadow-faq-open-dark" : ""}`}>
             <button
                 className="flex items-center justify-between cursor-pointer gap-[10px] w-full text-left"
                 onClick={() => setIsOpen(!isOpen)}
@@ -65,7 +65,7 @@ const FaqItem = ({ question, answer, initialOpen = false }) => {
 
                 {isOpen ? (
                     <svg
-                        className="rotate-180 transition-transform duration-300"
+                        className="rotate-180 transition-transform duration-1000"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ const FaqItem = ({ question, answer, initialOpen = false }) => {
                     </svg>
                 ) : (
                     <svg
-                        className="transition-transform duration-300 dark:text-white"
+                        className="transition-transform duration-1000 dark:text-white"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -102,9 +102,9 @@ const FaqItem = ({ question, answer, initialOpen = false }) => {
             <div
                 ref={contentRef}
                 style={{ height: `${contentHeight}px` }}
-                className="overflow-hidden transition-all duration-300 ease-in-out"
+                className="overflow-hidden transition-all duration-1000 ease-in-out"
             >
-                <div className={`transition-opacity duration-300 ${isOpen ? "opacity-100 pt-4" : "opacity-0"}`}>
+                <div className={`transition-opacity duration-1000 ${isOpen ? "opacity-100 pt-4" : "opacity-0"}`}>
                     <p className="text-[#4d4d4d] dark:text-white/80 text-lg pr-4 md:pr-6">{answer}</p>
                 </div>
             </div>

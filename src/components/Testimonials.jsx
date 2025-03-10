@@ -3,6 +3,8 @@ import UserOne from "../assets/user-1.avif";
 import Twitter from "../assets/x.svg";
 import Instagram from "../assets/instagram.svg";
 import SectionTitle from "./SectionTitle";
+import InstagramHover from "../assets/hover-instagram.svg";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
     const TestimonialsTitle = "Testimonials";
@@ -39,11 +41,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Twitter} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
 
                     <p className="p-[25px] text-[#4d4d4d] dark:text-white text-sm md:text-lg text-center">
@@ -71,11 +80,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Instagram} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Instagram} alt="Instagram" className="h-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={InstagramHover} alt="Instagram" className="h-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -96,11 +112,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Twitter} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
 
                     <p className="p-[25px] text-[#4d4d4d] dark:text-white text-sm md:text-lg text-center">
@@ -128,11 +151,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Instagram} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Instagram} alt="Instagram" className="h-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={InstagramHover} alt="Instagram" className="h-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -153,11 +183,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Twitter} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={Twitter} alt="Twitter" className="h-7 w-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
 
                     <p className="p-[25px] text-[#4d4d4d] dark:text-white text-sm md:text-lg text-center">
@@ -185,11 +222,18 @@ const Testimonials = () => {
                             <p className="text-[#4d4d4d] dark:text-white/80 text-sm">Operations Lead</p>
                         </div>
 
-                        <div className="shadow-social-icons dark:shadow-social-icons-dark rounded-[15px] opacity-100 bg-custom-white p-[3px]">
-                            <button className="p-[10px]">
-                                <img src={Instagram} alt="Twitter" className="h-[30px]" />
-                            </button>
-                        </div>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            className="bg-custom-white rounded-[20px] min-w-9 min-h-9 opacity-100 shadow-social-icons dark:shadow-social-icons-dark p-[3px] relative overflow-hidden group"
+                        >
+                            <div className="p-[10px] group-hover:translate-x-[120%] group-hover:rotate-[360deg] transition-all duration-700 ease-in-out">
+                                <img src={Instagram} alt="Instagram" className="h-7" />
+                            </div>
+                            <div className="p-[10px] absolute top-0 left-0 -translate-x-[120%] rotate-[-360deg] group-hover:translate-x-0 group-hover:rotate-0 transition-all duration-700 ease-in-out">
+                                <img src={InstagramHover} alt="Instagram" className="h-7 mt-[3px] ml-[3px]" />
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
