@@ -197,6 +197,7 @@ const Header = () => {
                     <a
                       key={link}
                       href={`#${link.toLowerCase()}`}
+                      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                       className="px-6 font-normal leading-[1.2em] text-[#4D4D4D] dark:text-white/90 text-base transition-all duration-300 ease-in-out"
                     >
                       {link}
